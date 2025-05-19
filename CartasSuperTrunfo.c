@@ -2,7 +2,7 @@
 
 int main () {
 
-int nCarta, nPontosTuristicos, populacao;
+unsigned long int nCarta, nPontosTuristicos, populacao;
 char estado[10];
 char nomeCidade [10];
 char codigo[10];
@@ -10,7 +10,9 @@ float areaKm;
 float pib;
 float dspopulacional;
 float pibcapita;
-int nCarta2, nPontosTuristicos2, populacao2;
+float superpoder;
+
+unsigned long int nCarta2, nPontosTuristicos2, populacao2;
 char estado2[10];
 char nomeCidade2 [10];
 char codigo2[10];
@@ -18,6 +20,7 @@ float areaKm2;
 float pib2;
 float dspopulacional2;
 float pibcapita2;
+float superpoder2;
 
 
 printf ("Digite o número da carta:\n ");
@@ -48,6 +51,9 @@ dspopulacional =(float) populacao / areaKm;
 
 pibcapita =(float) populacao / pib;
 
+superpoder = (float)populacao + areaKm + pib + (float)nPontosTuristicos + pibcapita + (1.0f / dspopulacional);
+superpoder2 = (float)populacao2 + areaKm2 + pib2 + (float)nPontosTuristicos2 + pibcapita2 + (1.0f / dspopulacional2);
+
 printf("Carta %d\n", nCarta);
 printf("Estado: %s\n", estado);
 printf("Código: %s%s\n", estado,codigo);
@@ -58,6 +64,8 @@ printf("PIB: %.2f bilhões de reais\n", pib);
 printf ("Número de Pontos Turísticos: %d\n", nPontosTuristicos);
 printf("Densidade populacional: %f hab/km²\n", dspopulacional);
 printf("PIB per Capita: %.2f reais\n", pibcapita);
+printf("Super poder: %.2f\n", superpoder);
+
 
 printf ("---------------------------------------------------------------------\n");
 
@@ -99,6 +107,23 @@ printf("PIB: %.2f bilhões de reais\n", pib2);
 printf("Número de Pontos Turísticos: %d\n", nPontosTuristicos2);
 printf("Densidade populacional: %f hab/km²\n", dspopulacional2);
 printf("PIB per Capita: %.2f reais\n", pibcapita2);
+printf("Super poder: %.2f\n", superpoder2);
+
+printf("--------------------------------------------------------\n");
+
+printf("Comparação de cartas:\n");
+
+printf("População: Carta %d venceu (%d)\n", (populacao > populacao2) ? 1 : 2, (populacao > populacao));
+printf("Area: Carta %d venceu (%d)\n",(areaKm > areaKm2) ? 1 : 2, (areaKm > areaKm2));
+printf("PIB: Carta %d venceu (%d)\n",(pib > pib2) ? 1 : 2, (pib > pib2));
+printf("Pontos Turísticos: Carta %d venceu (%d)\n",(nPontosTuristicos > nPontosTuristicos2) ? 1 : 2, (nPontosTuristicos > nPontosTuristicos2));
+printf("Densidade Populacional: Carta %d venceu (%d)\n",(dspopulacional > dspopulacional2) ? 1 : 2, (dspopulacional > dspopulacional2));
+printf("PIB per Capita: Carta %d venceu (%d)\n",(pibcapita > pibcapita2) ? 1 : 2, (pibcapita > pibcapita2));
+printf("Super Poder: Carta %d venceu (%d)\n",(superpoder > superpoder2) ? 1 : 2, (superpoder > superpoder2));
+
+
+
+
 
 
     return 0;
