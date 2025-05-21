@@ -23,7 +23,7 @@ float pibcapita2;
 float superpoder2;
 
 
-printf ("Carta 1:\n");
+printf ("Carta 1: \n");
 
 printf ("Digite o Estado da carta (A-H): \n");
 scanf ("%s", &estado);
@@ -51,7 +51,7 @@ pibcapita = (pib * 10000.0) / populacao;
 
 superpoder = (float)populacao + areaKm + pib + (float)nPontosTuristicos + pibcapita + (1.0f / dspopulacional);
 
-printf("Carta: %d\n", nCarta);
+printf("Carta 1 \n");
 printf("Estado: %s\n", estado);
 printf("Código: %s%s\n", estado,codigo);
 printf("Nome da Cidade: %s\n",nomeCidade);
@@ -94,7 +94,7 @@ pibcapita2 = (pib2 * 10000.0) / populacao2;
 
 superpoder2 = (float)populacao2 + areaKm2 + pib2 + (float)nPontosTuristicos2 + pibcapita2 + (1.0f / dspopulacional2);
 
-printf("Carta %d\n", nCarta2);
+printf("Carta 2 \n");
 printf("Estado: %s\n", estado2);
 printf("Código: %s%s\n", estado2,codigo2);
 printf("Nome da Cidade: %s\n",nomeCidade2);
@@ -108,19 +108,13 @@ printf("Super Poder: %.2f\n", superpoder2);
 
 printf("--------------------------------------------------------\n");
 
-printf("Comparação de cartas:\n");
+printf("Comparação de cartas (Atributo: Superpoder):\n");
 
-printf("População: Carta %d venceu (%d)\n", (populacao > populacao2) ? 1 : 2, (populacao > populacao));
-printf("Area: Carta %d venceu (%d)\n",(areaKm > areaKm2) ? 1 : 2, (areaKm > areaKm2));
-printf("PIB: Carta %d venceu (%d)\n",(pib > pib2) ? 1 : 2, (pib > pib2));
-printf("Pontos Turísticos: Carta %d venceu (%d)\n",(nPontosTuristicos > nPontosTuristicos2) ? 1 : 2, (nPontosTuristicos > nPontosTuristicos2));
-printf("Densidade Populacional: Carta %d venceu (%d)\n",(dspopulacional > dspopulacional2) ? 1 : 2, (dspopulacional > dspopulacional2));
-printf("PIB per Capita: Carta %d venceu (%d)\n",(pibcapita > pibcapita2) ? 1 : 2, (pibcapita > pibcapita2));
-printf("Super Poder: Carta %d venceu (%d)\n",(superpoder > superpoder2) ? 1 : 2, (superpoder > superpoder2));
+printf("CARTA 1 Superpoder: %.2f\n", superpoder);
+printf("CARTA 2 Superpoder: %.2f\n", superpoder2);
 
-
-
-
+if (superpoder > superpoder2){printf("CARTA 1 venceu!!!!\n");
+}else{ printf("CARTA 2 venceu!!!!");}
 
 
     return 0;
