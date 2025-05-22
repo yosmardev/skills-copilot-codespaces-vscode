@@ -108,12 +108,12 @@ printf("Super Poder: %.2f\n", superpoder2);
 
 printf("--------------------------------------------------------\n");
 
-printf("Comparação de cartas (Atributo: Superpoder):\n");
+printf("Comparação de cartas (Atributo: PIB):\n");
 
-printf("CARTA 1 Superpoder: %.2f\n", superpoder);
-printf("CARTA 2 Superpoder: %.2f\n", superpoder2);
+printf("CARTA 1 PIB: %.2f\n", pib);
+printf("CARTA 2 PIB: %.2f\n", pib2);
 
-if (superpoder > superpoder2){printf("CARTA 1 venceu!!!!\n");
+if (pib > pib2){printf("CARTA 1 venceu!!!!\n");
 }else{ printf("CARTA 2 venceu!!!!");}
 
 
